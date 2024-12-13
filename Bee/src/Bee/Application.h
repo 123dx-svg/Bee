@@ -12,6 +12,7 @@ namespace Bee
 		virtual ~Application();
 	};
 
+	//在用户那边定义
 	Application* CreateApplication();
 }
 
