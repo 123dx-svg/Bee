@@ -19,6 +19,10 @@
     <ClInclude Include="src\Bee\Log.h">
       <Filter>Bee</Filter>
     </ClInclude>
+    <ClInclude Include="src\Bee\Events\Event.h" />
+    <ClInclude Include="src\Bee\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Bee\Events\KeyEvent.h" />
+    <ClInclude Include="src\Bee\Events\MouseEvent.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bee\Application.cpp">

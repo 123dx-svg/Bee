@@ -10,7 +10,7 @@ int main(int argc, char** argv)
 	Bee::Log::Init();
 	BEE_CORE_WARN("initial Log!!");
 	int a =5;
-	BEE_INFO("Hello Var={0}",a);
+	BEE_INFO("Hello Var={0}",a); 
 
 
 

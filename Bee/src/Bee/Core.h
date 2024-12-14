@@ -10,3 +10,5 @@
 	#error Bee only support Windows!
 		
 #endif // BEE_PLATFORM_WINDOWS
+
+#define BIT(x) (1 << x)

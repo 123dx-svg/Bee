@@ -79,7 +79,7 @@
       <PrecompiledHeader>NotUsing</PrecompiledHeader>
       <WarningLevel>Level3</WarningLevel>
       <PreprocessorDefinitions>BEE_PLATFORM_WINDOWS;BEE_BUILD_DLL;BEE_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
-      <AdditionalIncludeDirectories>vendor\spdlog\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>vendor\spdlog\include;$(ProjectDir)src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
       <Optimization>Disabled</Optimization>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
@@ -154,6 +154,10 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Bee\Bee.dll ..\bin\Dist-windows-x86_64\San
     <ClInclude Include="src\Bee\Application.h" />
     <ClInclude Include="src\Bee\Core.h" />
     <ClInclude Include="src\Bee\EntryPoint.h" />
+    <ClInclude Include="src\Bee\Events\ApplicationEvent.h" />
+    <ClInclude Include="src\Bee\Events\Event.h" />
+    <ClInclude Include="src\Bee\Events\KeyEvent.h" />
+    <ClInclude Include="src\Bee\Events\MouseEvent.h" />
     <ClInclude Include="src\Bee\Log.h" />
   </ItemGroup>
   <ItemGroup>
