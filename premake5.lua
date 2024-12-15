@@ -19,6 +19,10 @@ project "Bee"
     targetdir ("bin/" .. outputdir .. "/%{prj.name}")
     objdir ("bin-int/" .. outputdir .. "/%{prj.name}")
 
+    --预编译头文件
+    pchheader "beepch.h"
+    pchsource "Bee/src/beepch.cpp"
+
     files
     {
         "%{prj.name}/src/**.h",
@@ -27,7 +31,7 @@ project "Bee"
 
     includedirs
     {
-        "%{prj.name}/src"
+        "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include"
     }
 

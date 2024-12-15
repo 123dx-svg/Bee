@@ -1,3 +1,4 @@
+#include "beepch.h"
 #include "Log.h"
 
 namespace Bee

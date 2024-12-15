@@ -4,6 +4,9 @@
     <Filter Include="Bee">
       <UniqueIdentifier>{11D9870B-7DE2-877C-065E-9E7C7266937C}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Bee\Events">
+      <UniqueIdentifier>{D587EE36-C13F-3084-2A47-09E0161ECB74}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Bee.h" />
@@ -16,13 +19,22 @@
     <ClInclude Include="src\Bee\EntryPoint.h">
       <Filter>Bee</Filter>
     </ClInclude>
+    <ClInclude Include="src\Bee\Events\ApplicationEvent.h">
+      <Filter>Bee\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bee\Events\Event.h">
+      <Filter>Bee\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bee\Events\KeyEvent.h">
+      <Filter>Bee\Events</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bee\Events\MouseEvent.h">
+      <Filter>Bee\Events</Filter>
+    </ClInclude>
     <ClInclude Include="src\Bee\Log.h">
       <Filter>Bee</Filter>
     </ClInclude>
-    <ClInclude Include="src\Bee\Events\Event.h" />
-    <ClInclude Include="src\Bee\Events\ApplicationEvent.h" />
-    <ClInclude Include="src\Bee\Events\KeyEvent.h" />
-    <ClInclude Include="src\Bee\Events\MouseEvent.h" />
+    <ClInclude Include="src\beepch.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bee\Application.cpp">
@@ -31,5 +43,6 @@
     <ClCompile Include="src\Bee\Log.cpp">
       <Filter>Bee</Filter>
     </ClCompile>
+    <ClCompile Include="src\beepch.cpp" />
   </ItemGroup>
 </Project>

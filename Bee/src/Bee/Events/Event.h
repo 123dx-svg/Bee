@@ -1,8 +1,8 @@
 #pragma once
 
 #include "Bee\Core.h"
-#include <string>
-#include <functional>
+//预编译头文件
+#include "beepch.h"
 
 namespace Bee
 {

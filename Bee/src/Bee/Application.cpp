@@ -1,3 +1,4 @@
+#include "beepch.h"
 #include "Application.h"
 #include "Bee/Events/ApplicationEvent.h"
 #include "Bee/Log.h"
