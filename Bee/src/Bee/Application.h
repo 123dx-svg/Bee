@@ -8,9 +8,15 @@ namespace Bee
 	class BEE_API Application
 	{
 	 public:
+		Application();
+		virtual ~Application();
+
 		void Run();
 
-		virtual ~Application();
+		private:
+		std::unique_ptr<class Window> m_Window;
+		bool m_Running = true;
+		
 	};
 
 	//在用户那边定义

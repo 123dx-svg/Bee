@@ -11,6 +11,12 @@ workspace "Bee"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+--包含一个解决方案的相对路径
+IncludeDir = {}
+IncludeDir["GLFW"] = "Bee/vendor/GLFW/include"
+
+include "Bee/vendor/GLFW"
+
 project "Bee"
     location "Bee"
     kind "SharedLib"
@@ -32,7 +38,14 @@ project "Bee"
     includedirs
     {
         "%{prj.name}/src",
-        "%{prj.name}/vendor/spdlog/include"
+        "%{prj.name}/vendor/spdlog/include",
+        "%{IncludeDir.GLFW}"
+    }
+
+    links
+    {
+        "GLFW",
+        "opengl32.lib"
     }
 
     filter "system:windows"
@@ -43,7 +56,8 @@ project "Bee"
         defines
         {
             "BEE_PLATFORM_WINDOWS",
-            "BEE_BUILD_DLL"
+            "BEE_BUILD_DLL",
+            "BEE_ENABLE_ASSERTS"
         }
         
         postbuildcommands
@@ -68,7 +82,7 @@ project "Bee"
         optimize "On"
     
     filter {"system:windows","configurations:Release"}
-        buildoptions "/MT"
+        buildoptions "/MD"
 
 project "Sandbox" 
     location "Sandbox"
