@@ -71,7 +71,7 @@ namespace Bee
             WindowCloseEvent event;
             data.EventCallback(event);
         });
-
+        
         glfwSetKeyCallback(m_Window, [](GLFWwindow* window, int key, int scancode, int action, int mods)
         {
             WindowData& data = *static_cast<WindowData*>(glfwGetWindowUserPointer(window));

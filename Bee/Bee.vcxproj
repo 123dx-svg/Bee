@@ -164,6 +164,8 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Bee\Bee.dll ..\bin\Dist-windows-x86_64\San
     <ClInclude Include="src\Bee\Events\Event.h" />
     <ClInclude Include="src\Bee\Events\KeyEvent.h" />
     <ClInclude Include="src\Bee\Events\MouseEvent.h" />
+    <ClInclude Include="src\Bee\Layer.h" />
+    <ClInclude Include="src\Bee\LayerStack.h" />
     <ClInclude Include="src\Bee\Log.h" />
     <ClInclude Include="src\beepch.h" />
     <ClInclude Include="src\Bee\Window.h" />
@@ -171,6 +173,8 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Bee\Bee.dll ..\bin\Dist-windows-x86_64\San
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bee\Application.cpp" />
+    <ClCompile Include="src\Bee\Layer.cpp" />
+    <ClCompile Include="src\Bee\LayerStack.cpp" />
     <ClCompile Include="src\Bee\Log.cpp" />
     <ClCompile Include="src\beepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>

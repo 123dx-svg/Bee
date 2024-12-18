@@ -3,6 +3,7 @@
 
 //给Bee引擎应用的
 #include "Bee/Application.h"
+#include "Bee/Layer.h"
 #include "Bee/Log.h"
 
 

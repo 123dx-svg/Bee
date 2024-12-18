@@ -1,5 +1,7 @@
 #pragma once
 #include"Core.h"
+#include"Window.h"
+#include"Bee/LayerStack.h"
 #include"Events/Event.h"
 #include"Bee/Events/ApplicationEvent.h"
 
@@ -15,12 +17,17 @@ namespace Bee
 		void Run();
 
 		void OnEvent(Event& e);
+
+		void PushLayer(Layer* layer);
+		void PushOverlay(Layer* layer);
+		
 		private:
 		//关闭窗口事件
 		bool OnWindowClosed(WindowCloseEvent& e);
 
 		std::unique_ptr<class Window> m_Window;
 		bool m_Running = true;
+		LayerStack m_LayerStack;
 		
 	};
 

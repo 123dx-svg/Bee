@@ -71,18 +71,18 @@ project "Bee"
     
     filter "configurations:Debug"
         defines "BEE_DEBUG"
+        buildoptions "/MDd"
         symbols "On"
 
     filter "configurations:Release"
         defines "BEE_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "BEE_DIST"
-        optimize "On"
-    
-    filter {"system:windows","configurations:Release"}
         buildoptions "/MD"
+        optimize "On"
 
 project "Sandbox" 
     location "Sandbox"
@@ -121,13 +121,16 @@ project "Sandbox"
         
         
     filter "configurations:Debug"
-    defines "BEE_DEBUG"
-    symbols "On"
+        defines "BEE_DEBUG"
+        buildoptions "/MDd"
+        symbols "On"
 
     filter "configurations:Release"
         defines "BEE_RELEASE"
+        buildoptions "/MD"
         optimize "On"
 
     filter "configurations:Dist"
         defines "BEE_DIST"
+        buildoptions "/MD"
         optimize "On"

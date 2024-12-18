@@ -14,9 +14,7 @@ namespace Bee
         
     protected:
         KeyEvent(int keyCode):m_KeyCode(keyCode) {}
-
-        
-        
+        //按键代号
         int m_KeyCode;
         
     };
@@ -36,6 +34,7 @@ namespace Bee
             EVENT_CLASS_TYPE(KeyPressed)
     
         private:
+            //长按
             int m_RepeatCount;
         
     };
