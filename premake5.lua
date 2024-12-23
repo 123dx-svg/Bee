@@ -14,8 +14,10 @@ outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 --包含一个解决方案的相对路径
 IncludeDir = {}
 IncludeDir["GLFW"] = "Bee/vendor/GLFW/include"
+IncludeDir["Glad"] = "Bee/vendor/Glad/include"
 
 include "Bee/vendor/GLFW"
+include "Bee/vendor/Glad"
 
 project "Bee"
     location "Bee"
@@ -39,12 +41,14 @@ project "Bee"
     {
         "%{prj.name}/src",
         "%{prj.name}/vendor/spdlog/include",
-        "%{IncludeDir.GLFW}"
+        "%{IncludeDir.GLFW}",
+        "%{IncludeDir.Glad}"
     }
 
     links
     {
         "GLFW",
+        "Glad",
         "opengl32.lib"
     }
 
@@ -57,7 +61,8 @@ project "Bee"
         {
             "BEE_PLATFORM_WINDOWS",
             "BEE_BUILD_DLL",
-            "BEE_ENABLE_ASSERTS"
+            "BEE_ENABLE_ASSERTS",
+            "GLFW_INCLUDE_NONE"
         }
         
         postbuildcommands

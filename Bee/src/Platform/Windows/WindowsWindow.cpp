@@ -5,6 +5,9 @@
 #include "Bee/Events/MouseEvent.h"
 #include "Bee/Events/KeyEvent.h"
 
+#include <glad/glad.h>
+#include<GLFW/glfw3.h>
+
 namespace Bee
 {
     static bool s_GLFWInitialized = false;
@@ -49,6 +52,8 @@ namespace Bee
 
         m_Window = glfwCreateWindow((int)props.Width, (int)props.Height, m_Data.Title.c_str(), nullptr, nullptr);
         glfwMakeContextCurrent(m_Window);
+        int status = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+        BEE_CORE_ASSERT(status,"Fail to initialize Glad");
         glfwSetWindowUserPointer(m_Window, &m_Data);
         SetVSync(true);
 

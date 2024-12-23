@@ -60,6 +60,7 @@ namespace Bee
         {
             if (m_Event.GetEventType() == T::GetStaticType())
             {
+            //这里是将每个事件处理的返回结果拿出来
                 m_Event.Handled = func(*(T*)&m_Event);
                 return true;
             }

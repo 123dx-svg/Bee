@@ -7,6 +7,12 @@
     <Filter Include="Bee\Events">
       <UniqueIdentifier>{D587EE36-C13F-3084-2A47-09E0161ECB74}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Platform">
+      <UniqueIdentifier>{2AC788B4-1694-E3BF-3FAD-D1672BD9184E}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Platform\Windows">
+      <UniqueIdentifier>{64FBD71A-50F4-F66C-7926-DCF1657ED678}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Bee.h" />
@@ -31,21 +37,39 @@
     <ClInclude Include="src\Bee\Events\MouseEvent.h">
       <Filter>Bee\Events</Filter>
     </ClInclude>
+    <ClInclude Include="src\Bee\Layer.h">
+      <Filter>Bee</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Bee\LayerStack.h">
+      <Filter>Bee</Filter>
+    </ClInclude>
     <ClInclude Include="src\Bee\Log.h">
       <Filter>Bee</Filter>
     </ClInclude>
+    <ClInclude Include="src\Bee\Window.h">
+      <Filter>Bee</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Platform\Windows\WindowsWindow.h">
+      <Filter>Platform\Windows</Filter>
+    </ClInclude>
     <ClInclude Include="src\beepch.h" />
-    <ClInclude Include="src\Bee\Window.h" />
-    <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bee\Application.cpp">
       <Filter>Bee</Filter>
     </ClCompile>
+    <ClCompile Include="src\Bee\Layer.cpp">
+      <Filter>Bee</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Bee\LayerStack.cpp">
+      <Filter>Bee</Filter>
+    </ClCompile>
     <ClCompile Include="src\Bee\Log.cpp">
       <Filter>Bee</Filter>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp">
+      <Filter>Platform\Windows</Filter>
+    </ClCompile>
     <ClCompile Include="src\beepch.cpp" />
-    <ClCompile Include="src\Platform\Windows\WindowsWindow.cpp" />
   </ItemGroup>
 </Project>
