@@ -20,6 +20,13 @@ namespace Bee
 
 		void PushLayer(Layer* layer);
 		void PushOverlay(Layer* layer);
+
+		inline static Application& Get()
+		{
+			return *s_Instance;
+		}
+
+		inline  Window& GetWindow() {return *m_Window;}
 		
 		private:
 		//关闭窗口事件
@@ -28,6 +35,9 @@ namespace Bee
 		std::unique_ptr<class Window> m_Window;
 		bool m_Running = true;
 		LayerStack m_LayerStack;
+
+		private:
+		 static Application* s_Instance;
 		
 	};
 

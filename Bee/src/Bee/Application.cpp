@@ -8,6 +8,8 @@
 namespace Bee
 {
 #define BIND_EVENT_FN(x) std::bind(&Application::x, this, std::placeholders::_1)
+
+	 Application* Application::s_Instance = nullptr;
 	
 	void Application::Run()
 	{
@@ -43,11 +45,13 @@ namespace Bee
 	void Application::PushLayer(Layer* layer)
 	{
 		m_LayerStack.PushLayer(layer);
+		layer->OnAttach();
 	}
 
 	void Application::PushOverlay(Layer* layer)
 	{
 		m_LayerStack.PushOverlay(layer);
+		layer->OnAttach();
 	}
 
 	bool Application::OnWindowClosed(WindowCloseEvent& e)
@@ -58,6 +62,7 @@ namespace Bee
 
 	Application::Application()
 	{
+		s_Instance= this;
 		//初始化创建界面
 		m_Window = std::unique_ptr<Window>(Window::Create());
 		//设置回调函数

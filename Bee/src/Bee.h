@@ -5,7 +5,7 @@
 #include "Bee/Application.h"
 #include "Bee/Layer.h"
 #include "Bee/Log.h"
-
+#include "Bee/ImGui/ImGuiLayer.h"
 
 //---Entry Point----
 #include "Bee/EntryPoint.h"

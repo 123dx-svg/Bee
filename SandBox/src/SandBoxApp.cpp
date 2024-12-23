@@ -29,6 +29,7 @@ public:
 	SandBox()
 	{
 		PushLayer(new ExampleLayer());
+		PushOverlay(new Bee::ImGuiLayer());
 	}
 
 	~SandBox()

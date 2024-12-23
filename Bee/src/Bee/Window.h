@@ -22,7 +22,7 @@ namespace Bee
 
 	
 	//基于窗口的的接口 和平台无关
-	class BEE_API Window
+	class BEE_API Window 
 	{
 		public:
 			using EventCallbackFn = std::function<void(Event&)>;
