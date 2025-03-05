@@ -167,6 +167,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Bee\Bee.dll ..\bin\Dist-windows-x86_64\San
     <ClInclude Include="src\Bee\Events\KeyEvent.h" />
     <ClInclude Include="src\Bee\Events\MouseEvent.h" />
     <ClInclude Include="src\Bee\ImGui\ImGuiLayer.h" />
+    <ClInclude Include="src\Bee\Input.h" />
     <ClInclude Include="src\Bee\Layer.h" />
     <ClInclude Include="src\Bee\LayerStack.h" />
     <ClInclude Include="src\Bee\Log.h" />
@@ -174,6 +175,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Bee\Bee.dll ..\bin\Dist-windows-x86_64\San
     <ClInclude Include="src\Platform\OpenGL\ImGuiOpenGLRenderer.h" />
     <ClInclude Include="src\Platform\Windows\WindowsWindow.h" />
     <ClInclude Include="src\beepch.h" />
+    <ClInclude Include="src\Platform\Windows\WindowsInput.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Bee\Application.cpp" />
@@ -186,6 +188,7 @@ copy /B /Y ..\bin\Dist-windows-x86_64\Bee\Bee.dll ..\bin\Dist-windows-x86_64\San
     <ClCompile Include="src\beepch.cpp">
       <PrecompiledHeader>Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="src\Platform\Windows\WindowsInput.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="vendor\GLFW\GLFW.vcxproj">
